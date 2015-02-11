@@ -12,11 +12,13 @@
       <div class='col-md-12'>
         <p><%= notice %></p>
         <p><%= alert %></p>
-        <%= link_to 'Sign_in', sign_in_path %>
-        <%= link_to 'Sign_up', sign_up_path %>
+        <%= link_to 'Sign_in', new_user_session_path %>
+        <%= link_to 'Sign_up', new_user_registration_path %>
         <%= yield %>
         <footer>
-          <%= current_user.first_name %> says hello
+          <% if user_signed_in? %>
+            Hello, <%= current_user.first_name %> you are finished.
+          <% end %>
         </footer>
       </div>
     </div>

@@ -1,6 +1,6 @@
 module ApplicationHelper
 
   def congrats!
-    "You completed the assignment"
+    "You completed the assignment...almost"
   end
 end
