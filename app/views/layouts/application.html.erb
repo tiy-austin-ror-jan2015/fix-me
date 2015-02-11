@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <p><%= notice %></p>
+        <p><%= alert %></p>
+        <%= link_to 'Sign_in', sign_in_path %>
+        <%= link_to 'Sign_up', sign_up_path %>
+        <%= yield %>
+        <footer>
+          <%= current_user.first_name %> says hello
+        </footer>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
